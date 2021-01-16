@@ -1,0 +1,65 @@
+.sec-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include sm {
+        text-align: center;
+        justify-content: center;
+    }
+}
+
+.sec-title {
+    font-size: 1.375rem;
+    font-weight: 700;
+    color: $text;
+    margin: 0 0 6px;
+}
+
+.sec-desc {
+    font-size: 1rem;
+    color: $text;
+    margin: 0;
+}
+
+.sec-more {
+    height: 2.25rem;
+    width: 7.9375rem;
+    border: 2px solid $sec;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1.125rem;
+    font-size: .875rem;
+    font-weight: 500;
+    color: $sec;
+    transition: all 0.3s ease-in-out;
+
+    &:hover,
+    &:focus {
+        background-color: $sec;
+        color: #fff;
+        text-decoration: none;
+    }
+
+    &.xs-more {
+        display: none;
+    }
+
+    @include sm {
+        display: none;
+
+        &.xs-more {
+            display: flex;
+            margin: 1.25rem auto 0;
+        }
+    }
+}
+
+.products-slider-sec {
+    margin-top: 48px;
+}
+
+.products-slider {
+    margin-top: 20px;
+}

@@ -1,0 +1,120 @@
+footer {
+    background-color: $main;
+    margin-top: 5rem;
+    padding-bottom: 3.5rem;
+    @include sm{
+        margin-top: 2.5rem;
+        padding-bottom: 1.875rem;
+    }
+}
+
+.footer {
+    padding-top: 3.75rem;
+    padding-bottom: 3.625rem;
+
+    @include sm {
+        padding: 2.1875rem 0 1rem;
+    }
+}
+
+.foot-head {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0 0 1.5rem;
+
+    @include sm {
+        margin: 0 0 1rem;
+    }
+}
+
+.news-subhead {
+    font-size: .875rem;
+    color: #fff;
+    font-weight: 400;
+    margin: 0 0 1.25rem;
+}
+
+.foot-nav {
+    margin: 0;
+
+    >li {
+        margin-bottom: 9px;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+
+        >a {
+            font-size: .875rem;
+            color: #9bb0cc;
+            display: inline-block;
+            transition: all 0.3s ease-in-out;
+
+            &:hover,
+            &:focus {
+                text-decoration: none;
+                transform: translateX(-5px);
+                color: #fff;
+
+                html[dir='ltr'] & {
+                    transform: translateX(5px);
+                }
+            }
+        }
+    }
+}
+
+.last-footer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.copyrights {
+    font-size: .875rem;
+    color: #9bb0cc;
+    margin: 1.125rem 0 1.5625rem;
+    span{
+        @include xs{
+            display: block;
+        }
+    }
+}
+
+.socials {
+    display: flex;
+    align-items: center;
+    gap: .375rem;
+
+    a {
+        border-radius: 50%;
+        background-color: #274369;
+        width: 2.5rem;
+        height: 2.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.125rem;
+        color: #fff;
+        transition: all 0.3s ease-in-out;
+
+        &:hover,
+        &:focus {
+            color: #fff;
+            background-color: $sec;
+            text-decoration: none;
+        }
+    }
+}
+
+.payments {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-top: 1.875rem;
+}

@@ -1,0 +1,128 @@
+.header-message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $main;
+    font-size: .875rem;
+    color: #fff;
+    font-weight: 700;
+
+    span {
+        width: 1.5625rem;
+        line-height: 2.1875rem;
+        text-align: center;
+        font-size: .6875rem;
+        cursor: pointer;
+    }
+}
+
+header {
+    background-color: #fff;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 5px;
+    align-items: center;
+    padding: 1.25rem 0;
+    border-bottom: 1px solid $border;
+
+    @include sm {
+        display: flex;
+        gap: 0;
+        justify-content: space-between;
+        border: none;
+        flex-wrap: wrap;
+        padding: 1.5rem 0 .625rem;
+    }
+}
+
+.logo-cont {
+    display: flex;
+    align-items: center;
+
+    @include sm {
+        order: 1;
+    }
+}
+
+.logo {
+    display: block;
+    max-width: 100%;
+    width: 12.3125rem;
+    @include sm{
+        width: 9.875rem;
+    }
+}
+
+.header-icons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1.625rem;
+
+    @include sm {
+        order: 2;
+    }
+}
+
+.header-icon {
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    color: $text;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+
+    &:hover,
+    &:focus {
+        color: $sec;
+        text-decoration: none;
+    }
+
+    &.menu-icon {
+        display: none;
+
+        html[dir='ltr'] & {
+            margin-right: 9px;
+        }
+
+        html[dir='rtl'] & {
+            margin-left: 9px;
+        }
+
+        @include sm {
+            display: flex;
+        }
+    }
+
+    @include sm {
+        font-size: 1.375rem;
+    }
+
+    .mo-text {
+        font-size: .9375rem;
+        font-weight: 500;
+
+        @include sm {
+            display: none;
+        }
+    }
+
+    .mo-count {
+        position: absolute;
+        top: -5px;
+        right: -5px;
+        width: 16px;
+        height: 16px;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $sec;
+        border-radius: 50%;
+        font-size: 10px;
+    }
+}

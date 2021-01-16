@@ -1,0 +1,92 @@
+.contacts-sec {
+    background-color: #1b3352;
+}
+
+.contacts-cont {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 1.875rem;
+    align-items: center;
+    padding: 2.0625rem 0;
+
+    @include sm {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+        padding: 2.5rem 0 0;
+    }
+}
+
+.contact-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #fff;
+    margin: 0;
+}
+
+.home-contacts {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.home-contact {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: max-content;
+
+    @include xs {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .contact-ico {
+        border-radius: 50%;
+        background-color: #142842;
+        width: 3.125rem;
+        height: 3.125rem;
+        font-size: 1.25rem;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .contact-text {
+        line-height: 1.625;
+
+        strong {
+            font-size: 1rem;
+            color: #fff;
+            font-weight: 500;
+            display: block;
+        }
+
+        span {
+            font-size: .875rem;
+            color: #9bb0cc;
+            transition: all 0.3s ease-in-out;
+        }
+    }
+
+    &:hover,
+    &:focus {
+        text-decoration: none;
+
+        .contact-ico {
+            color: #fff;
+            background-color: $sec;
+        }
+
+        .contact-text {
+            span {
+                color: $sec;
+            }
+        }
+    }
+}

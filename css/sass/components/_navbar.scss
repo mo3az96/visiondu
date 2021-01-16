@@ -1,0 +1,148 @@
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mo-navbar {
+    display: flex;
+    align-items: center;
+    gap: 1.6875rem;
+    margin: 0;
+
+    >li {
+        >a {
+            font-size: 1rem;
+            font-weight: 500;
+            color: $text;
+            transition: all 0.3s ease-in-out;
+
+            &.mo-track {
+                color: $sec;
+            }
+
+            &:hover,
+            &:focus {
+                color: $sec;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.header-settings {
+    display: flex;
+    align-items: center;
+    gap: .9375rem;
+}
+
+.header-setting {
+    position: relative;
+
+    .setting-anchor {
+        display: flex;
+        align-items: center;
+        color: $text;
+        font-size: .875rem;
+        line-height: 3.3125rem;
+        cursor: pointer;
+
+        &::after {
+            font-family: 'Linearicons-Free';
+            content: "\e874";
+            font-size: 8px;
+
+            html[dir='ltr'] & {
+                margin-left: 3px;
+            }
+
+            html[dir='rtl'] & {
+                margin-right: 3px;
+            }
+        }
+
+        img {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+
+            html[dir='rtl'] & {
+                margin-left: 5px;
+            }
+
+            html[dir='ltr'] & {
+                margin-right: 5px;
+            }
+        }
+    }
+
+    .header-dropDown {
+        position: absolute;
+        top: calc(100% - .3125rem);
+        background-color: #fff;
+        min-width: 7rem;
+        padding: .5rem .5625rem .5625rem;
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+        z-index: 13;
+        border-radius: .3125rem;
+        text-align: center;
+        left: 50%;
+        transform: translateX(-50%);
+        visibility: hidden;
+        opacity: 0;
+        margin: 0;
+        transition: all 0.3s ease-in-out;
+
+        li {
+            &:last-of-type {
+                a {
+                    border: none;
+                }
+            }
+        }
+
+        a {
+            white-space: nowrap;
+            border-bottom: 1px solid $border;
+            padding: 0 .25rem;
+            line-height: 1.5625rem;
+            font-size: .875rem;
+            display: block;
+            color: $text;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                color: $sec;
+                text-decoration: none;
+            }
+        }
+    }
+
+
+
+    @media (min-width: 992px) {
+        &:hover {
+            .setting-anchor {
+                color: $sec;
+                text-decoration: none;
+            }
+
+            .header-dropDown {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+    }
+
+    &.active {
+        .setting-anchor {
+            color: $sec;
+            text-decoration: none;
+        }
+
+        .header-dropDown {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+}

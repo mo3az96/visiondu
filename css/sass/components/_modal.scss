@@ -1,0 +1,121 @@
+.mo-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(#000, 0.3);
+    z-index: 999;
+    display: none;
+}
+
+.mo-modal-cont {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    @include sm {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.mo-modal {
+    width: 762px;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    position: relative;
+    transform: translateY(-150%);
+    transition: all 0.4s ease-in-out;
+
+    &.mo-modal-in {
+        transform: none;
+    }
+
+    @include sm {
+        width: 90%;
+    }
+
+    @include xs {
+        flex-direction: column;
+    }
+}
+
+.mo-modal-close {
+    position: absolute;
+    background-color: rgba(31, 31, 31, 0.2);
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #fff;
+    border-radius: 50%;
+    top: 12px;
+    left: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    html[dir='ltr'] & {
+        right: 10px;
+        left: auto;
+    }
+
+    &:hover {
+        color: $main;
+        background-color: #fff;
+        box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.15);
+    }
+}
+
+.mo-modal-img {
+    width: 50%;
+
+    @include xs {
+        width: 100%;
+        height: 220px;
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+.mo-modal-content {
+    width: 50%;
+    padding: 0 35px;
+
+    @include xs {
+        width: 100%;
+        padding: 25px 15px 25px;
+    }
+}
+
+.news-head {
+    font-size: 22px;
+    color: $main;
+    line-height: 1.545;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 14px;
+
+    html[dir='ltr'] & {
+        font-size: 28px;
+    }
+}
+
+.modal-subhead {
+    font-size: 18px;
+    line-height: 1.765;
+    color: $text;
+    text-align: center;
+    margin-bottom: 25px;
+}

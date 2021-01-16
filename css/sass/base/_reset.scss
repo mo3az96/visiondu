@@ -1,0 +1,69 @@
+body {
+    position: relative;
+    font-family: Bahij;
+    font-weight: 400;
+    font-style: normal;
+    background-color: $back;
+
+    &::-webkit-scrollbar {
+        background-color: $back;
+        width: 7px;
+        height: 0px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $main;
+    }
+}
+
+html {
+    scrollbar-width: thin;
+    scrollbar-color: $main $back;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.overflow {
+    overflow: hidden !important;
+}
+
+* {
+    outline: none;
+
+    &:hover,
+    &:focus {
+        outline: none;
+    }
+}
+
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.3;
+    z-index: 10;
+    display: none;
+}
+
+.opts-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    z-index: 12;
+    display: none;
+}
