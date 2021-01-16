@@ -300,7 +300,6 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: .9375rem;
 }
 
 .header-setting {
@@ -388,6 +387,14 @@ html[dir='ltr'] .header-setting .setting-anchor img {
 .header-setting .header-dropDown a:hover {
   color: var(--secondery-color);
   text-decoration: none;
+}
+
+html[dir='ltr'] .header-setting.curr {
+  margin-right: .9375rem;
+}
+
+html[dir='rtl'] .header-setting.curr {
+  margin-left: .9375rem;
 }
 
 @media (min-width: 992px) {
@@ -728,10 +735,16 @@ html[dir='ltr'] .header-setting .setting-anchor img {
 
 .product .pro-name {
   text-align: center;
-  margin: 4px 0 1px;
-  padding: 5px 0;
-  height: 42px;
+  margin: .25rem 0 .0625rem;
+  padding: .3125rem 0;
+  height: 2.625rem;
   overflow: hidden;
+}
+
+@media (max-width: 992px) {
+  .product .pro-name {
+    height: 2.5rem;
+  }
 }
 
 .product .pro-name a {
@@ -1201,6 +1214,7 @@ html[dir='ltr'] .news-head {
         -ms-flex-pack: center;
             justify-content: center;
     text-align: center;
+    margin: auto;
   }
 }
 
@@ -1452,7 +1466,6 @@ header {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  gap: 1.625rem;
 }
 
 @media (max-width: 992px) {
@@ -1539,6 +1552,14 @@ html[dir='rtl'] .header-icon.menu-icon {
   background-color: var(--secondery-color);
   border-radius: 50%;
   font-size: 10px;
+}
+
+html[dir='ltr'] .header-icon.user-icon {
+  margin-right: 1.625rem;
+}
+
+html[dir='rtl'] .header-icon.user-icon {
+  margin-left: 1.625rem;
 }
 
 .sec-head {
@@ -1738,7 +1759,6 @@ html[dir='ltr'] .foot-nav > li > a:hover, html[dir='ltr'] .foot-nav > li > a:foc
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: .375rem;
 }
 
 .socials a {
@@ -1757,6 +1777,7 @@ html[dir='ltr'] .foot-nav > li > a:hover, html[dir='ltr'] .foot-nav > li > a:foc
           justify-content: center;
   font-size: 1.125rem;
   color: #fff;
+  margin: 0 .15625rem;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
@@ -1777,10 +1798,13 @@ html[dir='ltr'] .foot-nav > li > a:hover, html[dir='ltr'] .foot-nav > li > a:foc
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  gap: 1.5rem;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-top: 1.875rem;
+  margin-top: 1.1rem;
+}
+
+.payments img {
+  margin: 0.75rem;
 }
 
 nav .close-menu {

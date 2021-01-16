@@ -2,7 +2,8 @@ footer {
     background-color: $main;
     margin-top: 5rem;
     padding-bottom: 3.5rem;
-    @include sm{
+
+    @include sm {
         margin-top: 2.5rem;
         padding-bottom: 1.875rem;
     }
@@ -77,8 +78,9 @@ footer {
     font-size: .875rem;
     color: #9bb0cc;
     margin: 1.125rem 0 1.5625rem;
-    span{
-        @include xs{
+
+    span {
+        @include xs {
             display: block;
         }
     }
@@ -87,7 +89,6 @@ footer {
 .socials {
     display: flex;
     align-items: center;
-    gap: .375rem;
 
     a {
         border-radius: 50%;
@@ -99,6 +100,7 @@ footer {
         justify-content: center;
         font-size: 1.125rem;
         color: #fff;
+        margin: 0 .15625rem;
         transition: all 0.3s ease-in-out;
 
         &:hover,
@@ -114,7 +116,10 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1.5rem;
     flex-wrap: wrap;
-    margin-top: 1.875rem;
+    margin-top: 1.1rem;
+
+    img {
+        margin: 0.75rem;
+    }
 }

@@ -22,10 +22,14 @@
 
     .pro-name {
         text-align: center;
-        margin: 4px 0 1px;
-        padding: 5px 0;
-        height: 42px;
+        margin: .25rem 0 .0625rem;
+        padding: .3125rem 0;
+        height: 2.625rem;
         overflow: hidden;
+
+        @include sm {
+            height: 2.5rem;
+        }
 
         a {
             max-width: 100%;

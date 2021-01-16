@@ -60,7 +60,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    gap: 1.625rem;
+   
 
     @include sm {
         order: 2;
@@ -124,5 +124,15 @@ header {
         background-color: $sec;
         border-radius: 50%;
         font-size: 10px;
+    }
+
+    &.user-icon{
+        html[dir='ltr'] & {
+            margin-right: 1.625rem;
+        }
+
+        html[dir='rtl'] & {
+            margin-left: 1.625rem;
+        }
     }
 }

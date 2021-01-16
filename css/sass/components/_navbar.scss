@@ -33,7 +33,6 @@ nav {
 .header-settings {
     display: flex;
     align-items: center;
-    gap: .9375rem;
 }
 
 .header-setting {
@@ -119,6 +118,15 @@ nav {
     }
 
 
+    &.curr {
+        html[dir='ltr'] & {
+            margin-right: .9375rem;
+        }
+
+        html[dir='rtl'] & {
+            margin-left: .9375rem;
+        }
+    }
 
     @media (min-width: 992px) {
         &:hover {
